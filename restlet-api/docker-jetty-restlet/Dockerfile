@@ -1,2 +1,2 @@
 FROM jetty
-ADD maven-wars-on-containers.war /var/lib/jetty/webapps
+ADD restlet-api.war /var/lib/jetty/webapps
