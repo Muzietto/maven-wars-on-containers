@@ -1,8 +1,9 @@
-# This file goes in /lib/systemd/system/
-# and its modification requires afterwards the following two commands:
+# This file goes in /lib/systemd/system/ and its modification requires afterwards the following two commands:
 # - sudo systemctl daemon reload
 # - sudo systemctl restart docker
-# The only attention point is the instruction ExecStart
+# The only attention point is the instruction ExecStart which binds dockerd to BOTH:
+# - the localhost network interface
+# - the command line socket
 
 [Unit]
 Description=Docker Application Container Engine
